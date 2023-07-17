@@ -1,7 +1,7 @@
 
 // Selecting DOM elements
 let stopwatchDisplay = document.querySelector('.stopwatchDisplay'); // Stopwatch display element
-let stopwatchDisplayText = document.querySelector('.stopwatchDisplayText'); // Stopwatch display text element
+let stopwatchHeader = document.querySelector('.stopwatchHeader'); // Stopwatch display text element
 let startBtn = document.getElementById('startBtn'); // Start button element
 let stopBtn = document.getElementById('stopBtn'); // Stop button element
 let resetBtn = document.getElementById('resetBtn'); // Reset button element
