@@ -1,37 +1,50 @@
 
 // Selecting DOM elements
-let stopwatchDisplay = document.querySelector('.stopwatchDisplay'); // Stopwatch display element
-let stopwatchHeader = document.querySelector('.stopwatchHeader'); // Stopwatch display text element
-let startBtn = document.getElementById('startBtn'); // Start button element
-let stopBtn = document.getElementById('stopBtn'); // Stop button element
-let resetBtn = document.getElementById('resetBtn'); // Reset button element
+// Stopwatch display element
+let stopwatchDisplay = document.querySelector('.stopwatchDisplay'); 
+// Stopwatch display text element
+let stopwatchHeader = document.querySelector('.stopwatchHeader'); 
+// Start button element
+let startBtn = document.getElementById('startBtn'); 
+// Stop button element
+let stopBtn = document.getElementById('stopBtn'); 
+// Reset button element
+let resetBtn = document.getElementById('resetBtn'); 
 
 // Variables to hold stopwatch values
 let milsec = 0; // Milliseconds
 let sec = 0; // Seconds
 let min = 0; // Minutes
 
-let intervalID = null; // Variable to store the interval ID
+// Variable to store the interval ID
+let intervalID = null; 
 
 // Event listener for the start button
 startBtn.addEventListener('click', function () {
     if (intervalID !== null) {
-        clearInterval(intervalID); // Clear any previous interval
+        // Clear any previous interval
+        clearInterval(intervalID); 
     }
-    intervalID = setInterval(startTimer, 10); // Start the interval for the timer
+    // Start the interval for the timer
+    intervalID = setInterval(startTimer, 10); 
 });
 
 // Event listener for the stop button
 stopBtn.addEventListener('click', function () {
-    clearInterval(intervalID); // Stop the timer by clearing the interval
+    // Stop the timer by clearing the interval
+    clearInterval(intervalID); 
 });
 
 // Event listener for the reset button
 resetBtn.addEventListener('click', function () {
-    clearInterval(intervalID); // Stop the timer by clearing the interval
-    stopwatchHeader.innerHTML = 'Stopwatch'; // Reset the display text
-    stopwatchDisplay.innerHTML = '00 : 00 : 00'; // Reset the display time
-    milsec = sec = min = 0; // Reset the stopwatch values
+    // Stop the timer by clearing the interval
+    clearInterval(intervalID); 
+    // Reset the display text
+    stopwatchHeader.innerHTML = 'Stopwatch'; 
+    // Reset the display time
+    stopwatchDisplay.innerHTML = '00 : 00 : 00'; 
+    // Reset the stopwatch values
+    milsec = sec = min = 0; 
 });
 
 // Function to start the timer and update the display
